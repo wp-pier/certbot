@@ -18,7 +18,7 @@ get_certificate() {
   echo "certbot exit code $ec"
   if [ $ec -eq 0 ]
   then
-    echo "Certificate obtained for $CERT_DOMAINS!
+    echo "Certificate obtained for $CERT_DOMAINS!"
   else
     echo "Cerbot failed for $CERT_DOMAINS. Check the logs for details."
   fi

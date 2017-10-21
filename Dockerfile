@@ -3,7 +3,7 @@ FROM wppier/cron:latest as cron
 FROM certbot/certbot:latest
 
 LABEL name="wppier/certbot"
-LABEL version="0.0.2"
+LABEL version="0.0.3"
 
 COPY --from=cron /usr/local/bin/supercronic /usr/local/bin/supercronic
 
