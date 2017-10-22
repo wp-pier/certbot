@@ -1,2 +1,2 @@
-# Run every minute
-*/1 * * * * run-certbot.sh
+# Run once a day at a (Random)[https://xkcd.com/221/] time
+12 3 * * * run-certbot.sh
