@@ -24,7 +24,7 @@ get_certificate() {
   fi
 }
 
-if $SEPARATE
+if [ "${SEPARATE:-false}" != "false"  ];
 then
   for d in $DOMAINS
   do
