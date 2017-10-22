@@ -12,8 +12,8 @@ get_certificate() {
 
   local d=${CERT_DOMAINS//,*/} # read first domain
   echo "Getting certificate for $CERT_DOMAINS"
-  certbot certonly --dns-cloudflare --agree-tos --renew-with-new-domains --keep-until-expiring, -n \
-  --email $EMAIL -d $CERT_DOMAINS
+  certbot certonly --dns-cloudflare --agree-tos --renew-with-new-domains --keep-until-expiring -n \
+  --dns-cloudflare-credentials $CF_CREDENTIALS_FILE --email $EMAIL -d $CERT_DOMAINS
   ec=$?
   echo "certbot exit code $ec"
   if [ $ec -eq 0 ]
